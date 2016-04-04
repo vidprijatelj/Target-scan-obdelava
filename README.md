@@ -10,6 +10,5 @@ Prebere miRNA_HOS_etc...cvs datoteko, ustvari dict. key:value (miRNA:nCounts), p
 
 Ustvari datoteko z vrsticami cytoscape.txt kjer so columni v Target gene; miRNA; nCounts; Cumulative weighted context++ score
 
-###heat_map.py
-Pregleda normalizirane vrednosti nCounts vseh obdelanih celic iz miRNA_...xlsx filea, izpiše outlierje
-Podatke se bo uporabilo za izdelavo heat mapa
+###Create_CVS.py
+Prebere miRNA_HOS_etc...cvs in ustvari miRNA_HOS_...output.cvs s prečiščenim besedilom. Ustvari nam osnovni CVS za obdelavo v R
