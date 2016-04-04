@@ -9,3 +9,7 @@ Prebere miRNA_HOS_etc...cvs datoteko, ustvari dict. key:value (miRNA:nCounts), p
   kjer je miRNA v summary_counts_mod.txt in miRNA_HOS_...cvs enaka (s pogojem da species = "9606")
 
 Ustvari datoteko z vrsticami cytoscape.txt kjer so columni v Target gene; miRNA; nCounts; Cumulative weighted context++ score
+
+###heat_map.py
+Pregleda normalizirane vrednosti nCounts vseh obdelanih celic iz miRNA_...xlsx filea, izpiše outlierje
+Podatke se bo uporabilo za izdelavo heat mapa
