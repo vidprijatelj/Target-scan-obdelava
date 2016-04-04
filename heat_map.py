@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import csv
 
 data = 0
 
@@ -52,6 +53,8 @@ def is_outlier(array, threshold=3.5):
     for x in array:
         if modified_z_score[i] > threshold:
             a.append( (i, modified_z_score[i], x))
+        else:
+            a.append(None)
         i += 1
     return a
     # pregledujemo array modificiranih Z vrednost kjer je vrednost večja od 3.5
@@ -79,10 +82,16 @@ print (columns)
 #data.shape[0] = število vrstic
 #data.shape[1] = število kolon"""
 
-matrix = np.zeros(17)
+matrix = ["Gene name", "124 pl",
+          "124 K", "124 E", "124 P", "172 P", "172 PE", "172 D", "172 DE",
+          "124 0", "124 PE", "124 D", "124 DE", "172 0", "172 pl", "172 E", "172 K"]
 # potrebno definirati array axis=1 (horizontalno)
 # da je dimenzije 17
 # variabla s katero bomo primarno delali
+
+outlier_header = ["Gene name", "124 pl",
+          "124 K", "124 E", "124 P", "172 P", "172 PE", "172 D", "172 DE",
+          "124 0", "124 PE", "124 D", "124 DE", "172 0", "172 pl", "172 E", "172 K"]
 
 for y in range(0, 800):
     # gremo čez vse miR kot vrstice
@@ -102,22 +111,25 @@ for y in range(0, 800):
             array.append(data.iat[y, x])
             # če je vrednost večja od 0, dodamo vrednost v array
         else:
-            p.append(0)
-            # če je vrednost manjša od 0, zapišemo 0; ne more ostati prazna vrednost
+            p.append(0.00001)
+            # če je vrednost manjša od 0, zapišemo 10E-5; ne more ostati prazna vrednost
             # saj izgubimo informacijo o specifični cel. liniji
+            array.append(None)
 
-    if array == []:
+    """if array == []:
         array = [0]
-    # pregledovanje MAD -> če je array prazen nam vrže error povezan z NaN!
+    # pregledovanje MAD -> če je array prazen nam vrže error povezan z NaN!"""
 
     matrix = np.row_stack((matrix, p))
     # dodamo začasni array v 2d matrix array, za potrebe zapisovanja
 
-    print(is_outlier(array))
+    """print(is_outlier(array))"""
 
-    """TO-DO: pregled mediane vseh začasnih arrayev, poišči vse outlierje
-    ali so ti outlierji pomembni?
-    kako se bo porihtalo, da vrednosti 0 niso pomembne za našo mediano t.j.
-    ne vplivajo nanjo"""
+print(matrix)
 
-# print(matrix)
+with open("miRNA_HOS_doktorat_vseh 16_output.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(matrix)
+
+
+#Outlierje bomo iskali v R
