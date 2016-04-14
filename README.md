@@ -15,7 +15,11 @@ Prebere miRNA_HOS_etc...cvs in ustvari miRNA_HOS_...output.cvs s prečiščenim 
 
 ###miRNA-miRNA_connections.py
 Pregleda .cvs (V tem primeru  cytoscape_bam.cvs), na koncu .cvs doda miRNA pare, ki vplivajo na iste gene.
+
 "Target gene" || "miRNA"
+
 "miRNA-ime" || "miRNA-ime"
+
+
 Dodano za potrebe clusterjev.
 Pri uvozu v cytoscape nujno odstraniti edge duplications.
