@@ -1,5 +1,7 @@
 # Target-scan-obdelava
-Obdelava target scan podatkov (Summary_counts.txt) za potrebe cytoscape
+Obdelava target scan podatkov (Summary_counts.txt) za potrebe cytoscape  
+  
+  
 ---
 ##R folder
 Dodan .R in kot njegov rezultat .csv geometrične normalizacije z razlikami in fold changeom  
