@@ -4,7 +4,8 @@ Obdelava target scan podatkov (Summary_counts.txt) za potrebe cytoscape
   
 ---
 ##R folder
-Dodan .R in kot njegov rezultat .csv geometrične normalizacije z razlikami in fold changeom  
+Dodan .r file geometrične normalizacije in kot njegov rezultat  kot .csv  
+Razlike in fold changei  
 -> 124K - 124P  
 -> 172K - 172P  
 -> 124K - 124PE  
@@ -13,7 +14,7 @@ Dodan .R in kot njegov rezultat .csv geometrične normalizacije z razlikami in f
   
 ---
 ##Cytoscape datoteke folder
-Vsi filei relevantni za cytoscape
+Vsi filei relevantni za cytoscape  
 Dodani exporti grafik najdenih z BinGO  
   
   
