@@ -8,7 +8,7 @@ Dodan .R in kot njegov rezultat .csv geometrične normalizacije z razlikami in f
 -> 124K - 124PE
 -> 172K - 172PE
 
-##Cytoscape dadotetke
+##Cytoscape datoteke
 Vsi filei relevantni za cytoscape
 Dodani exporti grafik najdenih z BinGO
 
