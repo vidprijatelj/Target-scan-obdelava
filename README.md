@@ -3,10 +3,10 @@ Obdelava target scan podatkov (Summary_counts.txt) za potrebe cytoscape
 
 ##R folder
 Dodan .R in kot njegov rezultat .csv geometrične normalizacije z razlikami in fold changeom
--> 124K - 124P
--> 172K - 172P
--> 124K - 124PE
--> 172K - 172PE
+  -> 124K - 124P
+  -> 172K - 172P
+  -> 124K - 124PE
+  -> 172K - 172PE
 
 ##Cytoscape datoteke
 Vsi filei relevantni za cytoscape
